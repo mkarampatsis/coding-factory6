@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    /* background-color: aqua; */
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    border: 1px solid black
+}
+
+.aueb-img {
+    width:400px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav li {
+    display: inline-block;
+    /* background-color: aqua; */
+    margin-right: 20px;
+}
+
+.nav li:first-child{
+    margin-left: 25px;
+}
+
+.nav a {
+    /* background-color: aqua; */
+    text-decoration: none;
+    font-size: 1.2rem;
+    color:black;
+    padding: 15px 5px;
+}
+
+.nav a:hover {
+    color: green
+}
+
+.main {
+    margin-top: 20px;
+}
+
+.main h1 {
+    text-align: center;
+}

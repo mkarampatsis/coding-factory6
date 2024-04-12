@@ -1,0 +1,19 @@
+h2[id], p[id] {
+    background-color: aquamarine;
+}
+
+a[href="#"]:hover {
+    background-color: blueviolet;
+}
+
+*[class^="info"] {
+    background-color: chocolate;
+}
+
+*[class*="text"] {
+    color: red;
+}
+
+h2[class$="title"] {
+    font-style: italic;
+}

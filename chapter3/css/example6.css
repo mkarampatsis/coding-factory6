@@ -1,0 +1,10 @@
+p {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    /* overflow: visible; */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow: auto;
+}

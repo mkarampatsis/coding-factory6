@@ -1,0 +1,41 @@
+img {
+    width: 800px;
+    height: auto;
+}
+
+ul > li {
+    color: red;
+    border: 1px solid black;
+}
+
+ul a:link {
+    color: yellow
+}
+
+ul > li:first-child{
+    color: green;
+    background-color: aquamarine;
+}
+
+ul > li:not(:first-child) {
+    color: orange;
+    background-color: beige;
+}
+
+/* First p after h1 */
+h1 + p {
+    color: blue;
+}
+
+/* All p after h1*/
+h1 ~ p {
+    color: blue;
+}
+
+a::before{
+    content: '\1F604';
+}
+
+a::after {
+    content: '\1F605';
+}

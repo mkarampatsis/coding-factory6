@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    width: 800px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto; */
+}
+
+.webdev-text1 {
+    padding: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+    background-color: aqua;
+}

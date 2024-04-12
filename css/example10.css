@@ -1,0 +1,13 @@
+.list-1{
+    list-style-type: square;
+    color: red;
+}
+
+ul li {
+    color: green;
+    background-color: aqua;
+}
+
+ul {
+    background-color: beige;
+}

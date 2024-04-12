@@ -1,0 +1,22 @@
+/* Cascade Rules */
+/* p {
+    color: red;
+}
+
+p {
+    color:blue;
+} */
+
+/* Specificity Rules */
+
+.cf-text {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+#cfText {
+    color: green!important;
+}
