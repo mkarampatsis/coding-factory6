@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 120px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+.container-fluid {
+    background-color: brown;
+}
+
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    background-color: red;
+    overflow: hidden;
+}
+
+.aside {
+    height: 200px;
+    width:450px;
+    border: 1px solid black;
+    background-color: chocolate;
+    float: left;
+}
+
+.main {
+    height: 200px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: azure;
+    float: right;
+}
+
+.footer {
+    min-height: 150px;
+    /* height: 150px; */
+    border: 1px solid black;
+    background-color: blue;
+    clear: both;
+    overflow: hidden;
+}
+
+.footer-item {
+    width: 30%;
+    height: 100px;
+    background-color: beige;
+    border: 1px solid black;
+    float: left;
+    margin: 10px 1.5%;
+}

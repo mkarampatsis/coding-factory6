@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    height: 300px;
+    width: 400px;
+    border: 1px solid black;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.main > img {
+    width: 100px;
+    height: auto;
+    border: 1px solid red;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.main > p {
+    margin-bottom: 20px;
+}
