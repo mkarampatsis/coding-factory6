@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    background-color: #762124;
+}
+
+.logo > img {
+    height: 120px;
+    width: auto;
+}
+
+.nav {
+    width: 700px;
+    background-color: aqua;
+}
+
+.nav > ul{
+    height: 120px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: blue; */
+}

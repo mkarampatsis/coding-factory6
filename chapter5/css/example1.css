@@ -1,0 +1,26 @@
+.container {
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    /* Οριζόντια στοίχιση */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+        
+    /* Κάθετη στοίχιση */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    align-items: stretch; /*no height to childs*/ 
+
+}
+
+div[class^=box]{
+    width: 200px;
+    /* height: 200px; */
+    background-color: lightblue;
+    border: 1px solid black;
+}

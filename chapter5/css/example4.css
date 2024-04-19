@@ -1,0 +1,23 @@
+.container {
+    width:250px;
+    height: 250px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+div[class^=box] {
+    width: 60px;
+    height: 50px;
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+}

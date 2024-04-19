@@ -1,0 +1,59 @@
+.container {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.box1 {
+    border: 1px solid black;
+    padding: 80px;
+    background-color: aqua;
+}
+
+.box2 {
+    border: 1px solid black;
+    padding: 80px;
+    background-color: brown;
+}
+
+.box3 {
+    border: 1px solid black;
+    padding: 80px;
+    background-color: cadetblue;
+}
+
+.gap-bottom {
+    margin-bottom: 10px;
+}
+
+.gap-top {
+    margin-top:100px
+}
+
+.item-relative {
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.item-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item-fixed {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+}
+
+.item-sticky {
+    position: sticky;
+    top: 0;
+}
