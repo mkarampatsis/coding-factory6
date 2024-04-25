@@ -1,0 +1,11 @@
+@media (min-width:992px){
+    body {
+        background-color: green;
+    }
+}
+
+@media (max-width:992px){
+    body {
+        background-color: yellow;
+    }
+}

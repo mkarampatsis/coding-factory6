@@ -1,0 +1,18 @@
+body {
+    background-color:orange;
+    color: blue;
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media all {
+    body {
+        background-color: brown;
+        color: white;
+    }
+}
