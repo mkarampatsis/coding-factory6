@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/example5-mockup.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="header">
+            <div class="logo">
+                <img src="./img/aueb-img.jpg" alt="AUEB">
+            </div>
+
+            <div class="navbar">
+                <ul class="nav">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Home &#9662</a>
+                        <ul class="dropdown-content">
+                            <li><a href="">Menu1</a></li>
+                            <li><a href="">Menu2</a></li>
+                            <li><a href="">Menu3</a></li>
+                            <li><a href="">Menu4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">We Educate</a></li>
+                    <li><a href="">We Innovate</a></li>
+                    <li><a href="">We Are</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle">
+                <button type="button">&#8801;</button>
+            </div>
+
+        </div>
+
+        <div class="navbar-toggle">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Home &#9662</a>
+                    <ul class="dropdown-content">
+                        <li><a href="">Menu1</a></li>
+                        <li><a href="">Menu2</a></li>
+                        <li><a href="">Menu3</a></li>
+                        <li><a href="">Menu4</a></li>
+                    </ul>
+                </li>
+                <li><a href="">We Educate</a></li>
+                <li><a href="">We Innovate</a></li>
+                <li><a href="">We Are</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.nav-toggle');
+        const navBarToggle = document.querySelector('.navbar-toggle');
+
+        toggleBtn.addEventListener('click', function() {
+            console.log("'Hello Button'");
+            navBarToggle.classList.toggle('show');
+        })
+
+    </script>
+</body>
+</html>
