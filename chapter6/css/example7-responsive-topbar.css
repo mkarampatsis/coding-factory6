@@ -1,0 +1,153 @@
+:root {
+    --white: #f9f9f9;
+    --black: #36383F;
+    --brown: #762124;
+    --grey: #85888c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.logo {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: var(--whitewhi);
+    padding: 1rem;
+}
+
+.navbar-links li:hover{
+    background-color: var(--grey);
+}
+
+/* Styling for Hamburger icon */
+
+.hamb {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+}
+
+.hamb-line {
+    background-color: var(--white);
+    /* Αρχικά το εμφανίζουμε για λόγους υλοποίησης */
+    /* display: block; */
+    display: none;
+    height: 2px;
+    width: 30px;
+    position: relative;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background-color: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu:checked ~ .navbar-links.active {
+    display: flex;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform:rotate(45deg);
+    top:0;
+}
+
+.side-menu {
+    display: none;
+}
+
+/* Styling for Main */
+main {
+    margin-top: 10px;
+    padding: 1rem;
+}
+
+@media (max-width: 500px) {
+    .hamb-line {
+        display: block;
+    }
+
+    .navbar-links {
+        /* display: none; */
+        width: 100%;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: none;
+    }
+    
+}
