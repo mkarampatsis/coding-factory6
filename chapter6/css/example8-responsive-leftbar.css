@@ -1,0 +1,121 @@
+:root {
+    --white: #f9f9f9;
+    --black: #36383f;
+    --grey: #85888c;
+    --brown: #762124;
+    --lightgray: #D0CCCC;
+    --navy: #002E94;
+    --blue: #083AA9;
+    --beige: #E1CEB5;
+    --wedding: #FFE7CC;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--navy);
+    color: var(--wedding);
+    flex: 0 20%;
+}
+
+.header-title {
+    margin-left: 1rem;
+}
+
+/* Navigation Styling */
+nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--wedding);
+}
+
+nav li a:hover {
+    background-color: var(--blue);
+}
+
+/* Main Styling */
+main {
+    flex: 0 80%;
+    background-color: var(--wedding);
+    height: 100vh;
+    /* Με το overflow το κείμενο που βγαίνει έξω από το κουτί το εμφανίζει με scrollbar δεξιά  */
+    overflow: auto;
+}
+
+pre {
+    /* text-align: justify; */
+    /* word-wrap: break-word; */
+    white-space: pre-wrap;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.banner img {
+    width: 300px;
+    height: auto;
+    border-radius: 10%;
+}
+
+.banner {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.bgcolor-beige {
+    background-color: var(--beige);
+}
+
+.article-padding {
+    padding: 1rem;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .banner {
+        margin-top: 250px;
+    }
+}

@@ -1,0 +1,26 @@
+div[class^="grid"] {
+    border: 1px solid red;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+/* .grid-item-1 {
+    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: 3;
+} */
+
+/* .grid-item-1 {
+    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+} */
+
+.grid-item-1 {
+    background-color: green;
+    grid-column: 1 / 3;
+}

@@ -1,0 +1,24 @@
+div[class^="grid"] {
+    border: 1px solid red
+}
+
+.container-grid1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: 200px;
+}
+
+.container-grid2 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+    grid-template-rows: 100px;
+    grid-auto-rows: 60px;
+}
+
+.container-grid3 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+    grid-template-rows: 60px 120px;
+}
