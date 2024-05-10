@@ -1,0 +1,21 @@
+div[class^="grid"] {
+    border: 1px solid red
+}
+
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 20px
+}
+
+.grid-item-1 {
+    background-color: green;
+    grid-column: 1 / 3;
+    /* stretch, center, start, end */
+    justify-self: stretch;
+    align-self: stretch;
+}
