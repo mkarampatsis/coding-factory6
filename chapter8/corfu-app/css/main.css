@@ -22,3 +22,47 @@
 .bg-dark {
     background-color: #006994!important;
 }
+
+header {
+    background-image: url('../img/header.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 50%;
+}
+
+.main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.line {
+    background-color: #006994;
+}
+
+.album {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.card {
+    border: none;
+}
+
+.card-img {
+    border-radius: 10%;
+    height: 250px;
+}
+
+.card:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background-color: black;
+}
+
+.carousel-item img {
+    height: 500px;
+}
