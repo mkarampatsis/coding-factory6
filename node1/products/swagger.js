@@ -73,7 +73,7 @@ exports.options = {
                                     "password": {"type": "string"},
                                     "name": {"type": "string"},
                                     "surname": {"type": "string"},
-                                    "email": {"type":"email"},
+                                    "email": {"type":"string"},
                                     "address":{
                                         "type":"object",
                                         "properties": {
