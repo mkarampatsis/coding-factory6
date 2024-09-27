@@ -12,7 +12,9 @@
   "dependencies": {
     "express": "^4.21.0",
     "mongoose": "^8.6.3",
-    "mongoose-unique-validator": "^5.0.1"
+    "mongoose-to-swagger": "^1.5.1",
+    "mongoose-unique-validator": "^5.0.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.6"
