@@ -24,7 +24,7 @@ exports.findUserProducts = async(req, res) => {
 }
 
 exports.insertUserProduct = async(req, res) => {
-    const username = req.body.username;
+    const username = req.params.username;
     const products = req.body.products;
 
     console.log("Insert products to user", username);
@@ -46,7 +46,7 @@ exports.insertUserProduct = async(req, res) => {
 
 exports.updateUserProduct = async (req, res) => {
     const username = req.params.username;
-    const product_id = req.body.product._id;
+    const product_id = req.params.id;
     const product_quantity = req.body.product.quantity;
 
     console.log("Update product quantity for user", username);
