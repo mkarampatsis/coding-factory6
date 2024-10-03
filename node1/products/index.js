@@ -6,8 +6,17 @@ const mongoose = require('mongoose');
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger');
+const cors = require('cors');
+
+app.use(cors({
+    // origin:"*",
+    origin: ['http://localhost:8000', 'http://www.aueb.gr']
+}));
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+app.use('/', express.static('files'));
 
 mongoose.connect(process.env.MONGODB_URI)
     .then(
