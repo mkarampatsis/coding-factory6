@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1728061694561" clover="3.2.0">
-  <project timestamp="1728061694561" name="All files">
-    <metrics statements="147" coveredstatements="90" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="6" elements="162" coveredelements="96" complexity="0" loc="147" ncloc="147" packages="5" files="8" classes="8"/>
+<coverage generated="1728064828941" clover="3.2.0">
+  <project timestamp="1728064828942" name="All files">
+    <metrics statements="147" coveredstatements="97" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="7" elements="162" coveredelements="104" complexity="0" loc="147" ncloc="147" packages="5" files="8" classes="8"/>
     <package name="products">
       <metrics statements="23" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="index.js" path="C:\Users\markos\Desktop\codingfactory6\node1\products\index.js">
@@ -35,9 +35,9 @@
       </file>
     </package>
     <package name="products.controllers">
-      <metrics statements="88" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="4"/>
+      <metrics statements="88" coveredstatements="40" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="5"/>
       <file name="user.controller.js" path="C:\Users\markos\Desktop\codingfactory6\node1\products\controllers\user.controller.js">
-        <metrics statements="36" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+        <metrics statements="36" coveredstatements="32" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -53,19 +53,19 @@
         <line num="23" count="1" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
         <line num="77" count="1" type="stmt"/>
         <line num="78" count="1" type="stmt"/>
@@ -180,10 +180,10 @@
       <file name="user.service.js" path="C:\Users\markos\Desktop\codingfactory6\node1\products\services\user.service.js">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
