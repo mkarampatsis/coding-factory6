@@ -11,4 +11,30 @@ async function findLastInsertedUser(){
     }
 }
 
-module.exports = { findLastInsertedUser }
+// async function findUsersProduct(username, id) {
+//     console.log("Find user's product", username, id);
+//     try{
+//         const result = User.findOne(
+//             { username:'user3', 'products._id':id},
+//             { username:1, 'products.$':1})
+//         return result;
+//     } catch(err) {
+//         console.log("Problem in finding user's product");
+//         return false;
+//     }
+// }
+
+async function findUsersProduct(username) {
+    console.log("Find user's product", username);
+    try{
+        const result = User.findOne(
+            { username: username},
+            { username:1, products:1})
+        return result;
+    } catch(err) {
+        console.log("Problem in finding user's product");
+        return false;
+    }
+}
+
+module.exports = { findLastInsertedUser, findUsersProduct }
