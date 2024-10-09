@@ -66,7 +66,8 @@ exports.update = async(req, res) => {
     try {
         const result = await User.findOneAndUpdate(
             {username: username},
-            updateUser
+            updateUser, 
+            { new: true }
         )
         res.json({status: true, data: result});
     } catch (err) {

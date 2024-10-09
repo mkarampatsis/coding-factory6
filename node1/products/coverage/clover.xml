@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1728064828941" clover="3.2.0">
-  <project timestamp="1728064828942" name="All files">
+<coverage generated="1728456740562" clover="3.2.0">
+  <project timestamp="1728456740563" name="All files">
     <metrics statements="147" coveredstatements="97" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="7" elements="162" coveredelements="104" complexity="0" loc="147" ncloc="147" packages="5" files="8" classes="8"/>
     <package name="products">
       <metrics statements="23" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
@@ -65,15 +65,15 @@
         <line num="56" count="1" type="stmt"/>
         <line num="66" count="1" type="stmt"/>
         <line num="67" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
         <line num="78" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
-        <line num="82" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
         <line num="83" count="1" type="stmt"/>
         <line num="84" count="1" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
       </file>
       <file name="user.product.controller.js" path="C:\Users\markos\Desktop\codingfactory6\node1\products\controllers\user.product.controller.js">
         <metrics statements="52" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
@@ -180,10 +180,10 @@
       <file name="user.service.js" path="C:\Users\markos\Desktop\codingfactory6\node1\products\services\user.service.js">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
