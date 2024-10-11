@@ -1,0 +1,27 @@
+<div class="container mt-4">
+    <h3>Welcome to Angular</h3>
+    <p>
+        Hello <strong>{{ title }}</strong>
+    </p>
+
+    <table class="table table-bordered w-50">
+        <tr>
+            <td class="fw-semibold">First Name</td>
+            <td class="ps-2">{{person.givenName}}</td>
+        </tr>
+        <tr>
+            <td class="fw-semibold">Surname Name</td>
+            <td class="ps-2">{{person.surName}}</td>
+        </tr>
+        <tr>
+            <td class="fw-semibold">Email</td>
+            <td class="ps-2">{{person.email}}</td>
+        </tr>
+        <tr>
+            <td class="fw-semibold">Age</td>
+            <td class="ps-2">{{person.age}}</td>
+        </tr>
+
+    </table>
+    <app-person-table></app-person-table>
+</div>
