@@ -1,0 +1,6 @@
+<h4>{{ "@for" }}  Example</h4>
+<div class="d-flex gap-2 flex-wrap">
+    @for (user of users; track user){
+        <app-person-table [person]="user"></app-person-table>
+    }
+</div>
