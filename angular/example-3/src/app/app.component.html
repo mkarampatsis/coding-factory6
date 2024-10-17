@@ -1,0 +1,19 @@
+<div class="container mt-2">
+    <div class="d-flex flex-column gap-2">
+        <nav class="navbar navbar-dark bg-primary justify-content-between">
+            <a class="navbar-brand ms-3 cursor-pointer" role="button" routerLink="">
+                CF6 - Angular
+            </a>
+        </nav>
+        <div class="d-flex flex-row gap-2">
+            <div class="d-flex flex-column text-nowrap bg-light p-2">
+                <span role="button" routerLink="component-input-example">Component Input Example</span>
+                <span role="button" routerLink="for-directive-example">{{'@for'}} Directive Example</span>
+                <span role="button" routerLink="event-bind-example">Event Bind Example</span>
+            </div>
+            <span class="flex-grow-1 p-2 text-nowrap">
+                <router-outlet></router-outlet>
+            </span>
+        </div>
+    </div>
+</div>
