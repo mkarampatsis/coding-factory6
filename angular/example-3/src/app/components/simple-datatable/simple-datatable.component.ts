@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { EPerson, ManyPerson } from '../../shared/interfaces/person';
 import { sortBy } from 'lodash-es';
 
@@ -10,17 +10,18 @@ import { sortBy } from 'lodash-es';
   styleUrl: './simple-datatable.component.css'
 })
 export class SimpleDatatableComponent {
+    @Output() personClicked = new EventEmitter<EPerson>();
     manyPerson = ManyPerson;
 
-    sortOrder = {
+    sortOrder: EPerson = {
         givenName: 'none',
         surName: 'none',
         age: 'none',
         email:'none',
-        address:'none'    
+        address:'none',
     }
 
-    sortData(sortKey: keyof EPerson): void {
+    sortData(sortKey: keyof EPerson ): void {
         if (this.sortOrder[sortKey]==='asc') {
             this.sortOrder[sortKey]='desc'
             this.manyPerson = sortBy(this.manyPerson,sortKey).reverse()
@@ -48,5 +49,6 @@ export class SimpleDatatableComponent {
 
     onPersonClick(person: EPerson){
         console.log(person);
+        this.personClicked.emit(person)
     }
 }
