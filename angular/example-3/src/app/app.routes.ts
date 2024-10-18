@@ -3,11 +3,13 @@ import { ComponentInputExampleComponent } from './components/component-input-exa
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { EventBindExampleComponent } from './components/event-bind-example/event-bind-example.component';
 import { ForDirectiveExampleComponent } from './components/for-directive-example/for-directive-example.component';
+import { SimpleDatatableComponent } from './components/simple-datatable/simple-datatable.component';
 
 export const routes: Routes = [
     { path:'component-input-example', component: ComponentInputExampleComponent },
     { path: 'for-directive-example', component: ForDirectiveExampleComponent },
     { path: 'event-bind-example', component: EventBindExampleComponent },
+    { path: 'simple-data-table', component: SimpleDatatableComponent},
     { path: 'welcome', component: WelcomeComponent },
     { path: '', redirectTo:'/welcome', pathMatch:'full'}
 ];

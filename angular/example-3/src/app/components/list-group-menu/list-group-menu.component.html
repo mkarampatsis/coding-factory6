@@ -1,0 +1,9 @@
+<div class="list-group">
+    @for (entry of menu; track entry){
+        <a 
+            class="list-group-item list-group-item-action" 
+            [routerLink] = "entry.routerLink"
+            [routerLinkActive] = "['active']"
+        >{{entry.text}}</a>
+    }
+</div>
