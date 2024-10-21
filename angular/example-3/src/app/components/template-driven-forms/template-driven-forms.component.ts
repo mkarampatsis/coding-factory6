@@ -12,7 +12,7 @@ import { PersonTableComponent } from '../person-table/person-table.component';
   styleUrl: './template-driven-forms.component.css'
 })
 export class TemplateDrivenFormsComponent {
-    currentPerson: EPerson;
+    currentPerson: EPerson | undefined;
     persons: EPerson[] = [];
 
     onPerson(person: EPerson){
