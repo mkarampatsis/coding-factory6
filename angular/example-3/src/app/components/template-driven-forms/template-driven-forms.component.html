@@ -1,0 +1,8 @@
+<h1>Template Driven Form Example</h1>
+<div class="d-flex gap-4">
+    <app-template-form (person)="onPerson($event)"></app-template-form>
+    <div class="d-flex flex-column gap-4">
+        <app-person-table></app-person-table>
+        <app-simple-datatable></app-simple-datatable>
+    </div>
+</div>
