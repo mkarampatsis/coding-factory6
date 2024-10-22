@@ -1,0 +1,8 @@
+<h4>Reactive Form Example</h4>
+<div class="d-flex gap-4">
+    <app-reactive-form-structure (person)="onPerson($event)"></app-reactive-form-structure>
+    <div class="d-flex flex-column gap-4">
+        <app-person-table [eperson]="currentPerson"></app-person-table>
+        <app-simple-datatable></app-simple-datatable>
+    </div>
+</div>
