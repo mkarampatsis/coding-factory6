@@ -1,0 +1,31 @@
+<div class="d-flex flex-column">
+    <h5>New Person Form</h5>
+    <form #userForm="ngForm">
+        <div>
+            <label for="">First Name</label>
+            <input type="text" name="givenName" ngModel #givenName="ngModel">
+        </div>
+        <div>
+            <label for="">Last Name</label>
+            <input type="text" name="surNane" ngModel #surName="ngModel">
+        </div>
+        <div>
+            <label for="">Age</label>
+            <input type="number" name="age" ngModel #age="ngModel">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email" ngModel #email="ngModel">
+        </div>
+        <div>
+            <label for="">Address</label>
+            <select name="address" ngModel #address="ngModel">
+                <option value="road1">road1</option>
+                <option value="road2">road2</option>
+            </select>
+        </div>
+    </form>
+    <button>
+        Submit
+    </button>
+</div>
