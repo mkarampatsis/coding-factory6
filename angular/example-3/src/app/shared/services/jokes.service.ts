@@ -1,5 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DadJoke, ChuckNorrisJoke } from '../interfaces/jokes';
 
 const DAD_JOKES_API_URL = 'https://icanhazdadjoke.com/';
 const CHUCK_NORRIS_API_URL = 'https://api.chucknorris.io/jokes/random'
@@ -13,7 +14,7 @@ export class JokesService {
     //constructor(http: HttpClient) { }
 
     getDadJokes(){
-      return this.http.get(DAD_JOKES_API_URL, {
+      return this.http.get<DadJoke>(DAD_JOKES_API_URL, {
                 headers: {
                     Accept: 'application/json'
                 }
@@ -21,7 +22,7 @@ export class JokesService {
     }
 
     getChuckNorrisJoke(){
-        return this.http.get(CHUCK_NORRIS_API_URL, {
+        return this.http.get<ChuckNorrisJoke>(CHUCK_NORRIS_API_URL, {
             headers: {
                 Accept: 'application/json'
             }
