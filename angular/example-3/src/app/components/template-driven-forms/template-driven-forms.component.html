@@ -1,6 +1,6 @@
 <h4>Template Driven Forms</h4>
 <div class="d-flex gap-4">
-    <app-template-form-structure></app-template-form-structure>
+    <app-template-form-structure (person)="onPerson($event)"></app-template-form-structure>
     <div class="d-flex flex-column gap-4">
         <app-person-table></app-person-table>
         <app-simple-datatable></app-simple-datatable>

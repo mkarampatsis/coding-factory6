@@ -1,31 +1,54 @@
 <div class="d-flex flex-column">
     <h5>New Person Form</h5>
-    <form #userForm="ngForm">
-        <div>
-            <label for="">First Name</label>
-            <input type="text" name="givenName" ngModel #givenName="ngModel">
-        </div>
-        <div>
-            <label for="">Last Name</label>
-            <input type="text" name="surNane" ngModel #surName="ngModel">
-        </div>
-        <div>
-            <label for="">Age</label>
-            <input type="number" name="age" ngModel #age="ngModel">
-        </div>
-        <div>
-            <label for="">Email</label>
-            <input type="text" name="email" ngModel #email="ngModel">
-        </div>
-        <div>
-            <label for="">Address</label>
-            <select name="address" ngModel #address="ngModel">
-                <option value="road1">road1</option>
-                <option value="road2">road2</option>
-            </select>
-        </div>
+    <form #userForm="ngForm" class="d-flex flex-column">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" name="givenName" required ngModel #givenName="ngModel">
+            <mat-error>First Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" name="surName" required ngModel #surName="ngModel">
+            <mat-error>Last Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input 
+                matInput 
+                type="number" 
+                name="age" 
+                ngModel 
+                #age="ngModel"
+                min="18"
+                max="100"
+                required
+                >
+            <mat-error>Age is invalid</mat-error>    
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" name="email" required ngModel #email="ngModel">
+            <mat-error>Email is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Address</mat-label>
+            <mat-select name="address" ngModel #address="ngModel">
+                <mat-option value="road1">road1</mat-option>
+                <mat-option value="road2">road2</mat-option>
+            </mat-select>
+        </mat-form-field>
     </form>
-    <button>
+    <button
+        mat-flat-button
+        color="primary"
+        [disabled]="userForm.invalid"
+        (click)="onSubmit(userForm.value)"
+    >
         Submit
+    </button>
+    <button
+    (click)="onSetValue()"
+    >
+        Reset Values
     </button>
 </div>
