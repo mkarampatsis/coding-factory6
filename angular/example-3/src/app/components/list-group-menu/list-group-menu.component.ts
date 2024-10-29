@@ -18,6 +18,7 @@ export class ListGroupMenuComponent {
         { text: "Simple Data Table", routerLink: "simple-data-table"},
         { text: "Template Driven Form", routerLink:"template-driven-form"},
         { text: "Reactive Forms", routerLink: "reactive-forms"},
-        { text: "Http Client Example", routerLink:"http-client-example"}
+        { text: "Http Client Example", routerLink:"http-client-example"},
+        { text: "User Registration Example", routerLink:"user-registration-example"}
     ]
 }
