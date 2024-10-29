@@ -22,6 +22,11 @@ export class UserRegistrationComponent {
 
     userService = inject(UserService)
 
+    registrationStatus: { success: boolean, message: string } = {
+        success:false,
+        message: "Not attempted yet"
+    }
+
     form = new FormGroup({
         givenName: new FormControl('', Validators.required),
         surName: new FormControl('',Validators.required),
@@ -42,10 +47,19 @@ export class UserRegistrationComponent {
         this.userService.registerUser(user).subscribe({
             next: (response) => {
                 console.log("No Errors",response)
+                this.registrationStatus = {success: true, message: response.msg}
             },
             error: (response) =>{
                 console.log("Errors",response)
+                let message = response.error.msg;
+                // console.log(response.error)
+                this.registrationStatus = {success: false, message: message}
             }
         })
+    }
+
+    registerAnother(){
+        this.form.reset();
+        this.registrationStatus = {success:false, message:'Not attempted yet'}
     }
 }
