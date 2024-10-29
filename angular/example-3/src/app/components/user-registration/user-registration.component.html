@@ -1,1 +1,43 @@
-<p>user-registration works!</p>
+<h4>User Registration Example</h4>
+
+<div class="d-flex flex-column mt-2 w-50">
+    <form [formGroup]="form" class="d-flex flex-column">
+        <mat-form-field>
+            <mat-label>First Name:</mat-label>
+            <input matInput type="text" formControlName="givenName">
+            <mat-error>First Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" formControlName="surName">
+            <mat-error>Last Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="email">
+            <mat-error>Email is required field or is already registered</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+            <mat-error>Password is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" formControlName="confirmPassword">
+            <mat-error>Confirm Password is required</mat-error>
+        </mat-form-field>
+        <button 
+            mat-flat-button 
+            (click)="onSubmit(form.value)"
+            [disabled]="form.invalid"
+        >
+            Register
+        </button>
+    </form>
+
+</div>
