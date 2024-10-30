@@ -1,5 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, Validators, ValueChangeEvent } from '@angular/forms';
+import { 
+    FormGroup, 
+    FormControl, 
+    ReactiveFormsModule, 
+    Validators, 
+    AbstractControl
+} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
@@ -28,18 +34,34 @@ export class UserRegistrationComponent {
     }
 
     form = new FormGroup({
-        givenName: new FormControl('', Validators.required),
-        surName: new FormControl('',Validators.required),
-        email: new FormControl('', [Validators.required, Validators.email]),
-        password: new FormControl('', [Validators.required, Validators.minLength(4)] ),
-        confirmPassword: new FormControl('', [Validators.required, Validators.minLength(4)])
-    })
+            givenName: new FormControl('', Validators.required),
+            surName: new FormControl('',Validators.required),
+            email: new FormControl('', [Validators.required, Validators.email]),
+            password: new FormControl('', [Validators.required, Validators.minLength(4)] ),
+            confirmPassword: new FormControl('', [Validators.required, Validators.minLength(4)]),
+        },
+        this.passwordConfirmPasswordValidator
+    )
+
+    passwordConfirmPasswordValidator(control: AbstractControl):{ [key:string] :boolean } | null {
+        const form = control as FormGroup;
+        const password = form.get('password')?.value;
+        const confirmPassword = form.get('confirmPassword')?.value;
+
+        if( password && confirmPassword && password!=confirmPassword) {
+            form.get("confirmPassword")?.setErrors({ passwordMismatch: true });
+            return { passwordMismatch: true };
+
+        }
+
+        return null
+    }
 
     onSubmit(value:any){
         console.log(value);
              
-       this.checkOnSubmit();
-          
+        this.checkOnSubmit();
+                 
     }
 
     registerAnother(){
