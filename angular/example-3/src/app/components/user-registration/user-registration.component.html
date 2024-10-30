@@ -17,8 +17,13 @@
 
             <mat-form-field>
                 <mat-label>Email</mat-label>
-                <input matInput type="text" formControlName="email">
-                <mat-error>Email is required field or is already registered</mat-error>
+                <input matInput type="text" formControlName="email" (blur)="check_duplicate_email()">
+                <!-- <mat-error>Email is required field</mat-error> -->
+                @if(form.get("email")?.hasError("duplicateEmail")){
+                    <mat-error>Email is already in use</mat-error>
+                } @else {
+                    <mat-error>Email is required field</mat-error>
+                }
             </mat-form-field>
 
             <mat-form-field>
