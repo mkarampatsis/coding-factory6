@@ -1,1 +1,15 @@
-<p>user-login works!</p>
+<h4>User Login</h4>
+
+<form [formGroup]="form" class="d-flex flex-column gap-3 w-50" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" class="form-control" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="form-control" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+        Login
+    </button>
+</form>

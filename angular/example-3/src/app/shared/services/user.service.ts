@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment.development';
-import { User } from '../interfaces/mongo-backend';
+import { Credentials, User } from '../interfaces/mongo-backend';
 
 const API_URL=`${environment.apiURL}/user`
 
@@ -17,5 +17,10 @@ export class UserService {
 
     check_duplicate_email(email: string){
         return this.http.get<{msg: string}>(`${API_URL}/check_duplicate_email/${email}`)
+    }
+
+    loginUser(credentials: Credentials){
+        return this.http.post<{access_token: string}>(`${API_URL}/login`,credentials)
+
     }
 }
