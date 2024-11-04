@@ -20,6 +20,7 @@ export class ListGroupMenuComponent {
         { text: "Reactive Forms", routerLink: "reactive-forms"},
         { text: "Http Client Example", routerLink:"http-client-example"},
         { text: "User Registration Example", routerLink:"user-registration-example"},
-        { text: "Restricted Content Example", routerLink:'restricted-content-example'}
+        { text: "Restricted Content Example", routerLink:'restricted-content-example'},
+        { text: "CRUD Example", routerLink: "crud-example"}
     ]
 }

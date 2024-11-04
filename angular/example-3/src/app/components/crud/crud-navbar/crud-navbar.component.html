@@ -1,1 +1,33 @@
-<p>crud-navbar works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/crud-example">CRUD</a>
+        <div class="d-flex gap-2 navbar-nav navbar-row">
+            <a 
+                class="nav-link" 
+                routerLink="/crud-example/create" 
+                [routerLinkActive]="['active']">
+                Create
+            </a>
+            <a 
+                class="nav-link" 
+                routerLink="/crud-example/read" 
+                [routerLinkActive]="['active']">
+                Read
+            </a>
+            <a 
+                class="nav-link" 
+                routerLink="/crud-example/update" 
+                [routerLinkActive]="['active']">
+                Update
+            </a>
+            <a 
+                class="nav-link" 
+                routerLink="/crud-example/delete" 
+                [routerLinkActive]="['active']">
+                Delete
+            </a>
+
+        </div>
+    </div>
+
+</nav>
