@@ -1,10 +1,17 @@
 <nav class="navbar navbar-dark bg-primary justify-content-between">
     <a class="navbar-brand ms-3 cursor-pointer" role="button" routerLink="">CF6 - Angular Introduction</a>
-    <span class="me-3 d-flex gap-2 text-light align-items-center">
-        Login
-        <mat-icon role="button" class="icon-link-hover" routerLink="login">
-            login
-        </mat-icon>
-    </span>
+    @if(user()){
+        <span class="me-3 d-flex gap-2 text-light">
+            Welcome, {{user()?.fullname}}
+            <mat-icon role="button" (click)="logout()">logout</mat-icon>
+        </span>
 
+    } @else {
+        <span class="me-3 d-flex gap-2 text-light align-items-center">
+            Login
+            <mat-icon role="button" class="icon-link-hover" routerLink="login">
+                login
+            </mat-icon>
+        </span>
+    }
 </nav>

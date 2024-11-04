@@ -12,4 +12,9 @@
     <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
         Login
     </button>
+    @if (invalidLogin){
+        <div class="alert alert-danger">
+            <strong>Error:</strong> Invalid email or paswword
+        </div>
+    }
 </form>
