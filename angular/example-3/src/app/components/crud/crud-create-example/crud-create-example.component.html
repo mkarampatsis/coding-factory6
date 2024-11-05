@@ -29,33 +29,34 @@
             </mat-form-field>
 
             <div formArrayName="phoneNumbers">
-                <mat-form-field>
-                    <mat-label>Τηλέφωνο:</mat-label>
-                    <input matInput type="text" formControlName="number">
-                    <mat-error>O αριθμός τηλεφώνου είναι υποχρεωτικός</mat-error>
-                </mat-form-field>
+                <div class="d-flex gap-3 align-items-center">
+                    <mat-form-field>
+                        <mat-label>Τηλέφωνο:</mat-label>
+                        <input matInput type="text" formControlName="number">
+                        <mat-error>O αριθμός τηλεφώνου είναι υποχρεωτικός</mat-error>
+                    </mat-form-field>
 
-                <mat-form-field>
-                    <mat-label>Τύπος:</mat-label>
-                    <mat-select formControlName="type">
-                        <mat-option value="mobile">Κινητό</mat-option>
-                        <mat-option value="work">Εργασία</mat-option>
-                        <mat-option value="home">Σπίτι</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <mat-icon
-                    role="button"
-                    class="cursor-pointer"    
-                >
-                    delete
-                </mat-icon>
-                <mat-icon
-                    role="button"
-                    class="cursor-pointer"
-                >
-                    add
-                </mat-icon>
-
+                    <mat-form-field>
+                        <mat-label>Τύπος:</mat-label>
+                        <mat-select formControlName="type">
+                            <mat-option value="mobile">Κινητό</mat-option>
+                            <mat-option value="work">Εργασία</mat-option>
+                            <mat-option value="home">Σπίτι</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-icon
+                        role="button"
+                        class="cursor-pointer"    
+                    >
+                        delete
+                    </mat-icon>
+                    <mat-icon
+                        role="button"
+                        class="cursor-pointer"
+                    >
+                        add
+                    </mat-icon>
+                </div>
             </div>
             <div formGroupName="address" class="d-flex flex-column">
                 <mat-form-field>
