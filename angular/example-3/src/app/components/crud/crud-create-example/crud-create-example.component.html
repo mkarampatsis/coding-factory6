@@ -29,34 +29,38 @@
             </mat-form-field>
 
             <div formArrayName="phoneNumbers">
-                <div class="d-flex gap-3 align-items-center">
-                    <mat-form-field>
-                        <mat-label>Τηλέφωνο:</mat-label>
-                        <input matInput type="text" formControlName="number">
-                        <mat-error>O αριθμός τηλεφώνου είναι υποχρεωτικός</mat-error>
-                    </mat-form-field>
+                @for(phone of phoneNumbers.controls; let i = $index; track i){
+                    <div [formGroupName]="i" class="d-flex gap-3 align-items-center">
+                        <mat-form-field>
+                            <mat-label>Τηλέφωνο:</mat-label>
+                            <input matInput type="text" formControlName="number">
+                            <mat-error>O αριθμός τηλεφώνου είναι υποχρεωτικός</mat-error>
+                        </mat-form-field>
 
-                    <mat-form-field>
-                        <mat-label>Τύπος:</mat-label>
-                        <mat-select formControlName="type">
-                            <mat-option value="mobile">Κινητό</mat-option>
-                            <mat-option value="work">Εργασία</mat-option>
-                            <mat-option value="home">Σπίτι</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-icon
-                        role="button"
-                        class="cursor-pointer"    
-                    >
-                        delete
-                    </mat-icon>
-                    <mat-icon
-                        role="button"
-                        class="cursor-pointer"
-                    >
-                        add
-                    </mat-icon>
-                </div>
+                        <mat-form-field>
+                            <mat-label>Τύπος:</mat-label>
+                            <mat-select formControlName="type">
+                                <mat-option value="mobile">Κινητό</mat-option>
+                                <mat-option value="work">Εργασία</mat-option>
+                                <mat-option value="home">Σπίτι</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-icon
+                            role="button"
+                            class="cursor-pointer"
+                            (click) = removePhoneNumber(i)  
+                        >
+                            delete 
+                        </mat-icon>{{i}}
+                        <mat-icon
+                            role="button"
+                            class="cursor-pointer"
+                            (click) = addPhoneNumber()
+                        >
+                            add
+                        </mat-icon>
+                    </div>
+                }
             </div>
             <div formGroupName="address" class="d-flex flex-column">
                 <mat-form-field>
@@ -71,8 +75,13 @@
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>TK:</mat-label>
-                    <input matInput type="text" formControlName="zipcode">
+                    <input matInput type="text" formControlName="zipCode">
                     <mat-error>Το TK είναι υποχρεωτικό</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Νο:</mat-label>
+                    <input matInput type="text" formControlName="number">
+                    <mat-error>Το No είναι υποχρεωτικό</mat-error>
                 </mat-form-field>
             </div>
         </form>
@@ -81,6 +90,7 @@
                 mat-raised-button
                 color="primary"
                 [disabled]="form.invalid"
+                (click) = "onSubmit(form.value)"
             >   Υποβολή
             </button>
             <button

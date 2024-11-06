@@ -14,4 +14,8 @@ export class CustomerService {
     createCustomer(customer: Customer){
         return this.http.post<{msg: string}>(`${API_URL}/create`, customer);
     }
+
+    getCustomerByAFM(afm:string){
+        return this.http.get<Customer>(`${API_URL}/afm/${afm}`)
+    }
 }

@@ -1,7 +1,8 @@
 export interface Address {
     street: string;
     city: string;
-    zipcode: string
+    zipCode: string
+    number: string
 }
 
 export interface PhoneNumber {

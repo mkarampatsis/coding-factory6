@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CrudNavbarComponent } from '../crud-navbar/crud-navbar.component';
 import { CustomerService } from '../../../shared/services/customer.service';
 import { FormGroup, FormControl, FormArray, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -26,6 +26,8 @@ import { Customer } from '../../../shared/interfaces/customer';
 })
 export class CrudCreateExampleComponent {
 
+    customerService = inject(CustomerService)
+
     form = new FormGroup({
         givenName: new FormControl('', Validators.required),
         surName: new FormControl('', Validators.required),
@@ -40,8 +42,39 @@ export class CrudCreateExampleComponent {
         address: new FormGroup({
             street: new FormControl('', Validators.required),
             city: new FormControl('', Validators.required),
-            zipcode: new FormControl('', Validators.required)  
+            zipCode: new FormControl('', Validators.required),
+            number: new FormControl('', Validators.required)  
         })
     })
 
+    phoneNumbers = this.form.get('phoneNumbers') as FormArray 
+
+    removePhoneNumber(index:number){
+        console.log(this.phoneNumbers.length)
+        console.log(index)
+        this.phoneNumbers.removeAt(index);
+    }
+
+    addPhoneNumber(){
+        this.phoneNumbers.push(
+            new FormGroup({
+                number: new FormControl("", Validators.required),
+                type: new FormControl("", Validators.required)
+            })
+        )
+    }
+
+    onSubmit(value: any){
+        console.log(value);
+        const customer = this.form.value as Customer
+        this.customerService.createCustomer(customer).subscribe({
+            next: (response) => {
+                console.log("Customer Created>>", response)
+                this.form.reset();
+            },
+            error: (error) => {
+                console.log("There was a problem:", error);
+            }
+        })
+    }
 }   
